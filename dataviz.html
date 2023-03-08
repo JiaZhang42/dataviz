@@ -114,6 +114,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#shady-confidence-intervals" id="toc-shady-confidence-intervals" class="nav-link" data-scroll-target="#shady-confidence-intervals"><span class="toc-section-number">1.1</span>  Shady Confidence Intervals</a></li>
   </ul></li>
   <li><a href="#template-theme-for-hierarchy-text" id="toc-template-theme-for-hierarchy-text" class="nav-link" data-scroll-target="#template-theme-for-hierarchy-text"><span class="toc-section-number">2</span>  Template Theme for Hierarchy Text</a></li>
+  <li><a href="#stargazer-tables" id="toc-stargazer-tables" class="nav-link" data-scroll-target="#stargazer-tables"><span class="toc-section-number">3</span>  Stargazer Tables</a></li>
   </ul>
 </nav>
 </div>
@@ -140,7 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 3, 2023</p>
+      <p class="date-modified">March 6, 2023</p>
     </div>
   </div>
     
@@ -334,6 +335,37 @@ Application
 <span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">'output/test.jpeg'</span>, <span class="at">width =</span> <span class="fl">13.6</span>, <span class="at">height =</span> <span class="fl">7.8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="stargazer-tables" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Stargazer Tables</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">stargazer</span>(attitude, <span class="at">type =</span> <span class="st">'text'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+=====================================
+Statistic  N   Mean  St. Dev. Min Max
+-------------------------------------
+rating     30 64.633  12.173  40  85 
+complaints 30 66.600  13.315  37  90 
+privileges 30 53.133  12.235  30  83 
+learning   30 56.367  11.737  34  75 
+raises     30 64.633  10.397  43  88 
+critical   30 74.767  9.895   49  92 
+advance    30 42.933  10.289  25  72 
+-------------------------------------</code></pre>
+</div>
+</div>
+
+<table style="text-align:center"><tbody><tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Statistic</td><td>N</td><td>Mean</td><td>St. Dev.</td><td>Min</td><td>Max</td></tr>
+<tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">rating</td><td>30</td><td>64.633</td><td>12.173</td><td>40</td><td>85</td></tr>
+<tr><td style="text-align:left">complaints</td><td>30</td><td>66.600</td><td>13.315</td><td>37</td><td>90</td></tr>
+<tr><td style="text-align:left">privileges</td><td>30</td><td>53.133</td><td>12.235</td><td>30</td><td>83</td></tr>
+<tr><td style="text-align:left">learning</td><td>30</td><td>56.367</td><td>11.737</td><td>34</td><td>75</td></tr>
+<tr><td style="text-align:left">raises</td><td>30</td><td>64.633</td><td>10.397</td><td>43</td><td>88</td></tr>
+<tr><td style="text-align:left">critical</td><td>30</td><td>74.767</td><td>9.895</td><td>49</td><td>92</td></tr>
+<tr><td style="text-align:left">advance</td><td>30</td><td>42.933</td><td>10.289</td><td>25</td><td>72</td></tr>
+<tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr></tbody></table>
 </section>
 
 </main>
